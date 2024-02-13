@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 10px 40px;
+    width: 100%;
+    height: 80px;
+
+    z-index: 1;
+
+    background: #eff0f1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    max-width: 2000px;
+
+    margin: 130px 10px;
+
+    gap: 40px;
+}
+
+.secao-carro {
+    height: 35vw;
+    width: 50%;
+}
+
+.imagem-carro {
+    max-height: 35vw;
+    height: 100%;
+
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.3);
+    /* filter: saturate(0%); */
+    border-radius: 8px;
+
+    position: relative;
+}
+
+.imagem-carro img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    object-fit: cover;
+
+    transition: all .60s;
+}
+
+.imagem-carro img:hover {
+    transform: scale(1.1);
+}
+
+.definicoes-carro {
+    width: 40%;
+}
+
+.title {
+    color: #cc0033;
+    text-transform:uppercase;
+    
+}
+
+.subtitle {
+    color: #313639;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    margin-bottom: 1rem;    
+}
+
+.description {
+    color: #383c3e;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: justify;
+
+    margin-bottom: 2.75rem;
+}
+
+.colors {
+    display: flex;
+    
+    flex-direction: column;
+
+    margin-bottom: 2.5rem;
+}
+
+.colors h3 {
+    margin-bottom: .5rem;
+}
+
+.colors-palette {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+
+.colors-palette li {
+    list-style: none;
+
+}
+
+.colors-palette li span {
+    display: flex;
+    
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+    
+    box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.6);
+
+    cursor: pointer;
+    transition: all .24s;
+}
+
+.colors-palette li span:hover {
+    transform: scale(1.15);
+}
+
+.wheels {
+    display: flex;
+    flex-direction: column;
+}
+
+.wheels h3 {
+    margin-bottom: .5rem;
+}
+
+.wheels-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.wheels-collection li {
+    max-width: 5.9375rem;
+    list-style: none;
+}
+
+.wheels-collection li span {
+    background: url('/src/imagens/rodas.jpeg');
+    padding-top: 100%;
+
+    width: 96px;
+    height: 50px;
+    display: block;
+
+    cursor: pointer;
+    transition: transform .24s;
+}
+
+.wheels-collection li span:hover {
+    transform: scale(1.15);
+}
+
+.selected {
+    transform: scale(1.15);
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .secao-carro {
+        width: 100%;
+        height: 70vw;
+    }
+
+    .imagem-carro {
+        max-height: 70vw;
+    }
+
+    .definicoes-carro {
+        width: 100%;
+        height: 70vw;
+    }
+}
