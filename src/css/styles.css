@@ -170,13 +170,15 @@ html {
 }
 
 .wheels-collection li span {
-    background: url('/src/imagens/rodas.jpeg');
+    background: url('/projeto-porsche/src/imagens/rodas.jpeg');
     padding-top: 100%;
-
+    border-radius: 50%;
     width: 96px;
     height: 50px;
     display: block;
 
+    box-shadow: 0 0 0.7rem 0 rgba(0, 0, 0, 0.6);
+    
     cursor: pointer;
     transition: transform .24s;
 }
